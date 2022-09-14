@@ -90,11 +90,3 @@ function plot_fft_signal(pos, spectrum1, caption, f1, f2, spectrum2)
     ylabel('Amplitude');
     title(caption)
 end
-
-%% Função para geração da transformada de fourier normalizada
-function [f,Y]  = generate_normalized_fft(t,x,fs)
-    N = length(t);
-    F = fs/N;
-    f = (-fs/2):F:(fs/2)-F;
-    Y = abs(fftshift(fft(x))/N);
-end
